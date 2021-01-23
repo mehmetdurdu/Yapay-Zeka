@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <title>Biyomekanik Sınıflandırma Test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Biyomekanik Sınıflandırma Test</h1>
+            <p>Sınıflandırma!</p>
+            {% if result %}
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Test sonucu!</h4>
+                <hr>
+                <p class="mb-0">Sonuç _> {{ result }}</p>
+                <a class="btn btn-primary mt-3" href="/">Yeniden Dene...</a>
+            </div>
+            {% endif %}
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-center mb-5">dataset_2c | column_2C.csv</h2>
+                <form action="/dataset_2c" , method="POST" id="myform">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">pelvic_incidence</label>
+                        <input type="number" step=0.000000001 class="form-control" name="pelvic_incidence"
+                            aria-describedby="emailHelp" placeholder="pelvic_incidence değerini giriniz!">
+                        <label for="exampleInputEmail1">pelvic_tilt numeric</label>
+                        <input type="number" step=0.000000001 class="form-control" name="pelvic_tilt_numeric"
+                            aria-describedby="emailHelp" placeholder="pelvic_tilt numeric değerini giriniz!">
+                        <label for="exampleInputEmail1">lumbar_lordosis_angle</label>
+                        <input type="number" step=0.000000001 class="form-control" name="lumbar_lordosis_angle"
+                            aria-describedby="emailHelp" placeholder="lumbar_lordosis_angle değerini giriniz!">
+                        <label for="exampleInputEmail1">sacral_slope</label>
+                        <input type="number" step=0.000000001 class="form-control" name="sacral_slope"
+                            aria-describedby="emailHelp" placeholder="sacral_slope değerini giriniz!">
+                        <label for="exampleInputEmail1">pelvic_radius</label>
+                        <input type="number" step=0.000000001 class="form-control" name="pelvic_radius"
+                            aria-describedby="emailHelp" placeholder="pelvic_radius değerini giriniz!">
+                        <label for="exampleInputEmail1">degree_spondylolisthesis</label>
+                        <input type="number" step=0.000000001 class="form-control" name="degree_spondylolisthesis"
+                            aria-describedby="emailHelp" placeholder="degree_spondylolisthesis değerini giriniz!">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <button type="submit" id="calc" class="btn btn-success btn-block">Tahmin Et!</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <h2 class="text-center mb-5">dataset_3c | column_3C.csv</h2>
+                <form action="/dataset_3c" , method="POST" id="myform">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">pelvic_incidence</label>
+                        <input type="number" step=0.000000001 class="form-control" name="pelvic_incidence"
+                            aria-describedby="emailHelp" placeholder="pelvic_incidence değerini giriniz!">
+                        <label for="exampleInputEmail1">pelvic_tilt numeric</label>
+                        <input type="number" step=0.000000001 class="form-control" name="pelvic_tilt_numeric"
+                            aria-describedby="emailHelp" placeholder="pelvic_tilt numeric değerini giriniz!">
+                        <label for="exampleInputEmail1">lumbar_lordosis_angle</label>
+                        <input type="number" step=0.000000001 class="form-control" name="lumbar_lordosis_angle"
+                            aria-describedby="emailHelp" placeholder="lumbar_lordosis_angle değerini giriniz!">
+                        <label for="exampleInputEmail1">sacral_slope</label>
+                        <input type="number" step=0.000000001 class="form-control" name="sacral_slope"
+                            aria-describedby="emailHelp" placeholder="sacral_slope değerini giriniz!">
+                        <label for="exampleInputEmail1">pelvic_radius</label>
+                        <input type="number" step=0.000000001 class="form-control" name="pelvic_radius"
+                            aria-describedby="emailHelp" placeholder="pelvic_radius değerini giriniz!">
+                        <label for="exampleInputEmail1">degree_spondylolisthesis</label>
+                        <input type="number" step=0.000000001 class="form-control" name="degree_spondylolisthesis"
+                            aria-describedby="emailHelp" placeholder="degree_spondylolisthesis değerini giriniz!">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <button type="submit" id="calc" class="btn btn-success btn-block">Tahmin Et!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
