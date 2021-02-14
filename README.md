@@ -1,2 +1,4 @@
 # Yapay-Zeka
-Biyomekanik Sınıflandırma Tahmin
+## Biyomekanik Sınıflandırma Tahmin
+
+
